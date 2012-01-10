@@ -78,7 +78,7 @@ def sorted_walk(path, ignore=()):
 
     # Sort lists and yield the current level.
     dirs.sort()
-    files.sort()
+    files.sortj()
     yield (path, dirs, files)
 
     # Recurse into directories.
@@ -218,7 +218,8 @@ def _assert_not_exists(path, pathmod=None):
     """Raises an OSError if the path exists."""
     pathmod = pathmod or os.path
     if pathmod.exists(path):
-        raise OSError('file exists: %s' % path)
+        pass
+        #raise OSError('file exists: %s' % path)
 
 def copy(path, dest, replace=False, pathmod=None):
     """Copy a plain file. Permissions are not copied. If dest already
