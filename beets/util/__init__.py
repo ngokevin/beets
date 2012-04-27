@@ -78,7 +78,7 @@ def sorted_walk(path, ignore=()):
 
     # Sort lists and yield the current level.
     dirs.sort()
-    files.sortj()
+    files.sort()
     yield (path, dirs, files)
 
     # Recurse into directories.
